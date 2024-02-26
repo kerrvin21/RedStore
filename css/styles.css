@@ -1,0 +1,422 @@
+body.disable-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    padding: 8px 35px;
+    transition: background-color ease-in-out .5s;
+}
+
+.btn:hover {
+    background-color: #4B2C28;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header .container nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform ease .5s;
+}
+
+
+
+header .container nav ul{
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px 5px rgba(100,100,100,.5);
+}
+
+header .container nav.active {
+    transform: translateX(0);
+}
+
+header .container nav.active2{
+    background-color: rgba(100,100,100, .3);
+}
+
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 5px 15px;
+}
+
+header .container img {
+    width: 150px;
+}
+
+header .container img:nth-child(2) {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.close-nav-btn {
+    margin-left: -15px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+header .container nav ul img {
+    height: 40px;
+    width: 50px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 5px;
+    text-transform: capitalize;
+}
+
+header nav ul li:hover:not(.close-nav-btn) a {
+    color: var(--primary-color);
+    border-bottom: 1px solid;
+}
+
+
+/*HERO*/
+main {
+    background-color: var(--secondary-color);
+    height: 91vh;
+    max-height: 91vh;
+    overflow: hidden;
+}
+
+main .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container .hero-text {
+    text-align: center;
+    padding: 50px;
+}
+
+main h1 {
+    text-transform: capitalize;
+    font-size: 62px;
+    padding: 30px 0;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+}
+
+.btn {
+    margin-top: 50px;
+}
+
+main img {
+    display: none;
+}
+
+/*==GLOBAL PRODUCT SECTION==*/
+
+section .container {
+    padding-top: 50px;
+}
+
+section .container>h1::after {
+    content: '';
+    background-color: var(--primary-color);
+    height: 8px;
+    width: 200px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+section .container h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 36px;
+    position: relative;
+    padding: 10px;
+}
+
+section .container ul {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+section .container ul li {
+    cursor: pointer;
+    transition: transform ease .5s;
+}
+
+section:not(.section-site-review, .section-product-category) .container ul li:hover {
+    box-shadow: 0 0 10px 5px rgb(100, 100, 100, .3);
+    transform: translateY(-10px);
+}
+
+section .container ul li img {
+    height: 100%;
+    width: 100%;
+}
+
+section .container ul li:has(div) img {
+    width: 100%;
+    height: 75%;
+}
+
+section .container ul li div {
+    height: 100%;
+    padding: 10px;
+}
+
+section .container ul li div p.item-name {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+section .container ul li div p.stars {
+    color: var(--primary-color);
+    padding: 3px 0;
+}
+
+/*SECTION - EXCLUSIVE - OFFER*/
+.section-exlusive-offer {
+    background-color: var(--secondary-color);
+}
+
+.section-exlusive-offer .container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-exlusive-offer .container>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.section-exlusive-offer .container>div p {
+    font-size: 13px;
+    padding: 10px 20px;
+}
+
+.section-exlusive-offer .container>div h1 {
+    font-size: 48px;
+}
+
+.section-exlusive-offer .container>div .btn {
+    margin-top: 10px;
+}
+
+
+.section-exlusive-offer .container img {
+    width: 400px;
+}
+
+/*SECTION - SITE - REVIEW*/
+
+section.section-site-review .container li.card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(100, 100, 100, .3);
+}
+
+section.section-site-review .container li.card-item h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 62px;
+}
+
+section.section-site-review .container li.card-item .review {
+    text-align: justify;
+    padding: 10px;
+}
+
+section.section-site-review .container li.card-item p:nth-child(3) {
+    color: var(--primary-color);
+    padding: 5px;
+}
+
+section.section-site-review .container li.card-item p.name {
+    font-size: 16px;
+    font-style: italic;
+}
+
+section.section-site-review .container ul li img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* == SPONSORS ==*/
+section.sponsors .container {
+    padding: 0;
+}
+
+section.sponsors .container img {
+    min-width: 180px;
+    filter: grayscale(1);
+    transition: filter ease-in .2s;
+}
+
+section.sponsors .container img:hover {
+    filter: grayscale(0);
+}
+
+section.sponsors .container ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* == FOOTER ==*/
+footer {
+    background-color: black;
+    color: gray;
+    padding: 30px;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .container > div{
+    border: 1px solid;
+}
+
+footer .container .title {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+footer .container div p:not(.title) {
+    padding: 10px;
+}
+
+footer .container ul {
+    padding: 10px;
+}
+
+footer .container a {
+    color: gray;
+    display: block;
+}
+
+footer .container a:hover {
+    color: white;
+}
+
+footer img {
+    max-width: 125px;
+    width: 50%;
+}
+
+footer .btns{
+    display: flex;
+    padding-inline: 10px;
+}
+
+footer .container .download {
+    flex-basis: 48%;
+    max-width: 430px;
+}
+
+footer .container .company-vision {
+    max-width: 430px;
+    flex-basis: 48%;
+    padding-top: 35px;
+    position: relative
+}
+
+footer .container .company-vision img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer .container .links,
+.container .follow-us {
+    text-align: center;
+    flex-basis: 48%;
+    max-width: 250px;
+}
+
+
+@media only screen and (min-width:768px){
+
+    header #menu-btn, header .close-nav-btn{
+        display: none;
+    }
+
+    header .container nav{
+        display: unset;
+        transform: unset;
+        position: unset;
+        background-color: unset;
+    }
+
+    header .container nav ul img{
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .container nav ul{
+        position: unset;
+        background-color: unset;
+        width: unset;
+        box-shadow: unset;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        flex:1;
+        padding: 0;
+        font-size: 18px;
+    }
+
+/* == MAIN ==*/
+
+
+
+}

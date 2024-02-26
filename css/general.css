@@ -1,0 +1,21 @@
+*::before
+,*::after
+,*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #C9532B;
+    --secondary-color: #FDE7E5;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
